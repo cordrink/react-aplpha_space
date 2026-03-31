@@ -3,6 +3,20 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+@font-face {
+    font-family: sf-mono;
+    src: url("./assets/font/sf/SFMonoRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: mars;
+    src: url("./assets/font/mars/Mars.otf") format("opentype");
+}
+
+body {
+    font-family: sf-mono, serif, sans-serif;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -126,5 +140,8 @@
     }
   html {
     @apply font-sans;
+    }
+    .mars-font {
+        font-family: mars, sans-serif;
     }
 }
