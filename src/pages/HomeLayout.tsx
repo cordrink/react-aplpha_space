@@ -5,10 +5,10 @@ import {Footer, Header, Navbar} from "@/components";
 export const HomeLayout = () => {
     return (
         <>
-            <Header />
-            <Navbar />
-            <Outlet />
-            <Footer />
+            <Header/>
+            <Navbar/>
+            <Outlet/>
+            <Footer/>
         </>
     );
 };

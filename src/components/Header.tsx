@@ -4,7 +4,7 @@ import type {ReactNode} from "react";
 
 export const Header = (): ReactNode => {
     return (
-        <header className={"test bg-black "}>
+        <header className={"bg-black "}>
             <div className="align-element grid grid-cols-2 md:grid-cols-3 p-2">
                 <Link to="/">
                     <h1 className={"mars-font text-lg pt-2 tracking-[.8rem] text-white"}>aphaSpace</h1>
