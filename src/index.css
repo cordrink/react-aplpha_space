@@ -132,19 +132,27 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
-  html {
-    @apply font-sans;
+
+    html {
+        @apply font-sans;
     }
+
     .mars-font {
         font-family: mars, sans-serif;
     }
+
     .test {
         @apply border-solid border-2 border-black;
+    }
+
+    .align-element {
+        @apply max-w-6xl mx-auto px-6;
     }
 }
