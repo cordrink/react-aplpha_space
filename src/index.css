@@ -63,6 +63,7 @@ body {
 }
 
 :root {
+    --clr-violet: #86198f;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
@@ -154,5 +155,9 @@ body {
 
     .align-element {
         @apply max-w-6xl mx-auto px-6;
+    }
+
+    .section {
+        @apply min-h-[100vh] max-w-6xl mx-auto px-0 py-12;
     }
 }
