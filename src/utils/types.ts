@@ -13,9 +13,19 @@ export type News = [
         events: string[]
     }
 ]
+
 export type NewsResponse = {
     count: number,
     next: string,
     previous: string,
     results: News[]
+}
+
+export type FilterParams = {
+    term?: string
+}
+
+export type NewsResponseWithParams = {
+    response: NewsResponse,
+    params: FilterParams
 }

@@ -18,6 +18,7 @@ export const FormInput = ({label, name, type, defaultValue, placeholder}: FormIn
             <Label htmlFor={name} className={"capitalize text-xl"}>{displayLabel}</Label>
             <Input
                 id={name}
+                name={name}
                 type={type}
                 aria-label={displayLabel}
                 defaultValue={defaultValue}
