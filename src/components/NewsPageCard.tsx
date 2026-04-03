@@ -17,7 +17,7 @@ export const NewsPageCard = ({news}: { news: News }) => {
             <div className={"p-2 overflow-hidden lg:col-span-3 h-[300px] md:h-[200px] lg:h-full"}>
                 <p className={"text-2xl font-bold"}>{title}</p>
                 <p>{published_at.split("T")[0]}</p>
-                <p>
+                <p className={"flex"}>
                     <span>{news_site}</span>
                     <span>|</span>
                     <span className={"flex gap-x-2"}>
