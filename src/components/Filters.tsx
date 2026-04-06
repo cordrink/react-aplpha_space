@@ -4,7 +4,6 @@ import {FormInput} from "@/components";
 import {Button} from "@/components/ui/button.tsx";
 
 export const Filters = ({term, mode}: { term: string | undefined, mode: string }): ReactNode => {
-    console.log(mode)
     const navigation = useNavigation();
 
     // On vérifie si le formulaire est en train d'être envoyé (tout cela rendu possible grace au LoaderFunction)
@@ -31,7 +30,7 @@ export const Filters = ({term, mode}: { term: string | undefined, mode: string }
                     size="lg"
                     disabled={isSearching}
                 >
-                    <Link to={"/news"}>Reset</Link>
+                    <Link to={`/${mode}`}>Reset</Link>
                 </Button>
             </div>
         </Form>

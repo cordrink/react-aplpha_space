@@ -10,7 +10,7 @@ export const CardGrid = ({objects, mode}: { objects: News[] | HubbleImagesRespon
         return (
             <div className={"grid gap-2 auto-rows-fr mb-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"}>
                 {hubbleData.results.map((item: HubbleImage) => (
-                    <HubbleCard image={item} key={item.photo_id} />
+                    <HubbleCard image={item} key={item.photo_id}/>
                 ))}
             </div>
         )

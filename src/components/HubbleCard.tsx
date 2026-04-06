@@ -8,7 +8,7 @@ export const HubbleCard = ({image}: { image: HubbleImage }) => {
     const {url} = photo_url_m;
 
     return (
-        <Link to={`/hubbles/${photo_id}`}>
+        <Link to={`/hubble/${photo_id}`}>
             <Card className="relative min-h-[400px] rounded-none slider-card">
                 <CardHeader className="absolute top-0 left-0 p-2 text-white z-10 w-full">
                     <CardTitle>{photo_title}</CardTitle>

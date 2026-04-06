@@ -1,7 +1,7 @@
 import {datastroCustomFetch} from "@/utils/customFetch.ts";
-import type {HubbleImagesResponse} from "@/utils/types.ts";
+import type {FilterParams, HubbleImagesResponse, HubbleImagesResponseWithParams} from "@/utils/types.ts";
 import {type LoaderFunction, useLoaderData} from "react-router-dom";
-import {CardGrid, Overview, Title} from "@/components";
+import {CardGrid, Filters, Overview, Title} from "@/components";
 
 const hubbleParams = {
     order_by: "photo_date_taken DESC",
@@ -9,13 +9,18 @@ const hubbleParams = {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const hubblePageLoader: LoaderFunction = async (): Promise<HubbleImagesResponse | null> => {
+export const hubblePageLoader: LoaderFunction = async ({request}): Promise<HubbleImagesResponseWithParams | null> => {
     try {
+        const urlParams: FilterParams = Object.fromEntries([...new URL(request.url).searchParams.entries()]);
+
         const formattedParams = {
+            where: urlParams.term ? `photo_title like "${urlParams.term}"` : "",
             ...hubbleParams,
         };
+
         const response = await datastroCustomFetch.get<HubbleImagesResponse>("", {params: formattedParams});
-        return response.data;
+
+        return {response: response.data, params: urlParams};
     } catch (error) {
         console.error(error);
         return null;
@@ -23,13 +28,16 @@ export const hubblePageLoader: LoaderFunction = async (): Promise<HubbleImagesRe
 }
 
 export const Hubble = () => {
-    const data = useLoaderData() as HubbleImagesResponse;
-    console.log(data)
+    const data = useLoaderData() as HubbleImagesResponseWithParams;
+
+    const {response, params} = data;
+
     return (
         <section className={"section"}>
-            <Title text={"Hubble telescope photos"} />
-            <Overview objects={data} />
-            <CardGrid objects={data} mode={"hubble-page"} />
+            <Title text={"Hubble telescope photos"}/>
+            <Filters term={params.term} mode={"hubble"} key={params.term}/>
+            <Overview objects={response}/>
+            <CardGrid objects={response} mode={"hubble-page"}/>
         </section>
     );
 };

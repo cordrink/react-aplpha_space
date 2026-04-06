@@ -12,7 +12,7 @@ const router = createBrowserRouter([
             {index: true, element: <Landing/>},
             {path: "spaceX", element: <SpaceX/>},
             {path: "webb", element: <Webb/>},
-            {path: "hubble", element: <Hubble/>, loader: hubblePageLoader},
+            {path: "hubble", element: <Hubble/>, loader: hubblePageLoader, errorElement: <ErrorElement/>},
             {path: "news", element: <News/>, loader: newsPageLoader, errorElement: <ErrorElement/>},
             {path: "apod", element: <Apod/>},
         ]
