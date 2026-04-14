@@ -61,3 +61,13 @@ export type HubbleImagesResponse = {
 }
 
 export type HubbleImagesResponseWithParams = { response: HubbleImagesResponse, params: FilterParams };
+
+export type ApodType = {
+    date: string,
+    explanation: string,
+    hdurl: string,
+    media_type: string,
+    service_version: string,
+    title: string,
+    url: string,
+}

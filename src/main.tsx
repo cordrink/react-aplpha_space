@@ -5,6 +5,7 @@ import {Apod, HomeLayout, Hubble, Landing, News, SpaceX, Webb} from "@/pages";
 import {newsPageLoader} from "@/pages/News.tsx";
 import {ErrorElement} from "@/components";
 import {hubblePageLoader} from "@/pages/Hubble.tsx";
+import {apodPageLoader} from "@/pages/Apod.tsx";
 
 const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
             {path: "webb", element: <Webb/>},
             {path: "hubble", element: <Hubble/>, loader: hubblePageLoader, errorElement: <ErrorElement/>},
             {path: "news", element: <News/>, loader: newsPageLoader, errorElement: <ErrorElement/>},
-            {path: "apod", element: <Apod/>},
+            {path: "apod", element: <Apod/>, loader: apodPageLoader, errorElement: <ErrorElement/>},
         ]
     }
 ])
