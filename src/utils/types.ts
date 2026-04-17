@@ -1,18 +1,16 @@
-export type News = [
-    {
-        id: number,
-        title: string,
-        url: string,
-        image_url: string,
-        news_site: string,
-        summary: string,
-        published_at: string,
-        updated_at: string,
-        featured: boolean,
-        launches: string[],
-        events: string[]
-    }
-]
+export type News = {
+    id: number,
+    title: string,
+    url: string,
+    image_url: string,
+    news_site: string,
+    summary: string,
+    published_at: string,
+    updated_at: string,
+    featured: boolean,
+    launches: string[],
+    events: string[]
+}
 
 export type NewsResponse = {
     count: number,
@@ -70,4 +68,46 @@ export type ApodType = {
     service_version: string,
     title: string,
     url: string,
+}
+
+export type WebbImage = {
+    id: string,
+    observation_id: string,
+    program: number,
+    details: {
+        mission: string,
+        instruments: [
+            {
+                instrument: string
+            },
+            {
+                instrument: string
+            },
+            {
+                instrument: string
+            },
+            {
+                instrument: string
+            },
+            {
+                instrument: string
+            }
+        ],
+        suffix: string,
+        description: string
+    },
+    file_type: string,
+    thumbnail: string,
+    location: string
+}
+
+export type WebbImagesResponse = {
+    statusCode: number,
+    body: WebbImage[],
+    error: string,
+}
+
+export type WebbNewsAndImagery = {
+    news: News[] | null;
+    imagery: WebbImage[] | null;
 }

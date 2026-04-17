@@ -31,13 +31,13 @@ export const newsPageLoader: LoaderFunction = async ({request}): Promise<NewsRes
 export const News = () => {
     const data = useLoaderData() as NewsResponseWithParams;
     const {response, params} = data;
-
+    console.log(response.results)
     return (
         <section className={"section"}>
             <Title text={"all news"}/>
             <Filters term={params.term} mode={"news"} key={params.term}/>
             <Overview objects={response}/>
-            <CardGrid objects={response.results} mode="news-pages"/>
+            <CardGrid objects={response.results} mode="news-page"/>
         </section>
     );
 };

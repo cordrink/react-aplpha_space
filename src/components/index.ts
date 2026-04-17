@@ -12,3 +12,7 @@ export {Title} from "@/components/Title.tsx";
 export {Overview} from "@/components/Overview.tsx";
 export {Filters} from "@/components/Filters.tsx";
 export {FormInput} from "@/components/FormInput.tsx";
+export {RelatedNews} from "@/components/RelatedNews.tsx";
+export {NewsCard} from "@/components/NewsCard.tsx";
+export {WebbTelescopeSummary} from "@/components/WebbTelescopeSummary.tsx";
+export {ImageCard} from "@/components/ImageCard.tsx";
