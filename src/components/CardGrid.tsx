@@ -1,9 +1,12 @@
-import type {HubbleImage, HubbleImagesResponse, News, WebbImage} from "@/utils/types.ts";
+import type {HubbleImage, HubbleImagesResponse, News, Rocket, WebbImage} from "@/utils/types.ts";
 import type {ReactNode} from "react";
-import {ImageCard, NewsPageCard} from "@/components";
+import {ImageCard, NewsPageCard, RocketCard} from "@/components";
 import {HubbleCard} from "@/components/HubbleCard.tsx";
 
-export const CardGrid = ({objects, mode}: { objects: News[] | HubbleImagesResponse | WebbImage[], mode: string }): ReactNode => {
+export const CardGrid = ({objects, mode}: {
+    objects: News[] | HubbleImagesResponse | WebbImage[] | (Rocket | null)[],
+    mode: string
+}): ReactNode => {
     if (mode === "hubble-page") {
         const hubbleData = objects as HubbleImagesResponse;
 
@@ -20,7 +23,7 @@ export const CardGrid = ({objects, mode}: { objects: News[] | HubbleImagesRespon
         return (
             <div className={"grid gap-2 auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"}>
                 {imageryData.map((imagery: WebbImage) => (
-                   <ImageCard key={imagery.id} image={imagery} />
+                    <ImageCard key={imagery.id} image={imagery}/>
                 ))}
             </div>
         )
@@ -34,7 +37,18 @@ export const CardGrid = ({objects, mode}: { objects: News[] | HubbleImagesRespon
                 ))}
             </div>
         );
+    } else if (mode === "rockets") {
+        const rocketsData = objects as Rocket[] | null;
+        return (
+            <div>
+                {rocketsData && (
+                    rocketsData.map((rocketItem, index) => (
+                        <RocketCard key={rocketItem.id} rocket={rocketItem} index={index} />
+                    ))
+                )}
+            </div>
+        )
     }
-    console.log(objects);
+
     return null;
 };

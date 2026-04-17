@@ -111,3 +111,109 @@ export type WebbNewsAndImagery = {
     news: News[] | null;
     imagery: WebbImage[] | null;
 }
+
+export type Rocket = {
+    id: number;
+    active: boolean;
+    stages: number;
+    boosters: number;
+    cost_per_launch: number;
+    success_rate_pct: number;
+    first_flight: string;
+    country: string;
+    company: string;
+    height: {
+        meters: number | null;
+        feet: number | null;
+    };
+    diameter: {
+        meters: number | null;
+        feet: number | null;
+    };
+    mass: {
+        kg: number;
+        lb: number;
+    };
+    payload_weights: Array<{
+        id: string;
+        name: string;
+        kg: number;
+        lb: number;
+    }>;
+    first_stage: {
+        reusable: boolean;
+        engines: number;
+        fuel_amount_tons: number;
+        burn_time_sec: number | null;
+        thrust_sea_level: {
+            kN: number;
+            lbf: number;
+        };
+        thrust_vacuum: {
+            kN: number;
+            lbf: number;
+        };
+    };
+    second_stage: {
+        reusable: boolean;
+        engines: number;
+        fuel_amount_tons: number;
+        burn_time_sec: number | null;
+        thrust: {
+            kN: number;
+            lbf: number;
+        };
+        payloads: {
+            option_1: string;
+            option_2: string;
+            composite_fairing: {
+                height: {
+                    meters: number | null;
+                    feet: number | null;
+                };
+                diameter: {
+                    meters: number | null;
+                    feet: number | null;
+                };
+            };
+        };
+    };
+    engines: {
+        number: number;
+        type: string;
+        version: string;
+        layout: string | null;
+        isp: {
+            sea_level: number;
+            vacuum: number;
+        };
+        engine_loss_max: number | null;
+        propellant_1: string;
+        propellant_2: string;
+        thrust_sea_level: {
+            kN: number;
+            lbf: number;
+        };
+        thrust_vacuum: {
+            kN: number;
+            lbf: number;
+        };
+        thrust_to_weight: number;
+    };
+    landing_legs: {
+        number: number;
+        material: string | null;
+    };
+    flickr_images: string[];
+    wikipedia: string;
+    description: string;
+    rocket_id: string;
+    rocket_name: string;
+    rocket_type: string;
+};
+
+
+export type SpacexNewsAndRocket = {
+    news: News[] | null;
+    rockets: (Rocket | null)[] | null;
+}

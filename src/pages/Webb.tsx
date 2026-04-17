@@ -56,9 +56,9 @@ export const Webb = () => {
             <Title text={"James Webb Space Telescope"}/>
             {news && <RelatedNews news={news}/>}
             <Title text={"in brief"}/>
-            <WebbTelescopeSummary />
+            <WebbTelescopeSummary/>
             <Title text={"Recent Imagery"}/>
-            {imagery && <CardGrid objects={imagery} mode={"imagery"} />}
+            {imagery && <CardGrid objects={imagery} mode={"imagery"}/>}
         </section>
     );
 };

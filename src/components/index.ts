@@ -16,3 +16,4 @@ export {RelatedNews} from "@/components/RelatedNews.tsx";
 export {NewsCard} from "@/components/NewsCard.tsx";
 export {WebbTelescopeSummary} from "@/components/WebbTelescopeSummary.tsx";
 export {ImageCard} from "@/components/ImageCard.tsx";
+export {RocketCard} from "@/components/RocketCard.tsx";
