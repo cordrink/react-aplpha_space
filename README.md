@@ -1,73 +1,83 @@
 # React + TypeScript + Vite + Axios + tailwind + lucide React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# REACT ALPHA SPACE
 
-Currently, two official plugins are available:
+<!-- badge 1 ligne - le plus important en premier -->
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white)](https://vite.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Application de consultation d'evement spatial
 
-## React Compiler
+## ✨ Fonctionnalités principales
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Consulte des evenemets de la NASA
+- Consulte des evenemets de SpaceX
+- Recherche des informations relative au spatial
+- Responsive design (mobile first)
+- Presentaion de l'actu spatial
 
-## Expanding the ESLint configuration
+[//]: # (## 🚀 Demo en ligne)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[//]: # (🔗 **https://ton-super-app.vercel.app**  )
+[//]: # (&#40;ou Netlify / Render / Cloudflare Pages / etc.&#41;)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies utilisées
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Catégorie        | Technologie                                      | Version |
+|------------------|--------------------------------------------------|---------|
+| Framework        | React                                            | 18.x    |
+| Build tool       | Vite                                             | —       |
+| Langage          | TypeScript                                       | 5.x     |
+| Styling          | Tailwind CSS / shadcn/ lucide React              | —       |
+| Déploiement      | Vercel / Netlify                                 | —       |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Installation & Lancement rapide
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/cordrink/react-aplpha_space.git
+cd react-aplpha_space
+
+# 2. Installer les dépendances
+npm ci
+
+# 3. Configurer les variables d'environnement
+cp .env
+# → ouvre .env et renseigne tes clés (API, base de données, etc.) : VITE_API_KEY_NASA, VITE_API_KEY_JWST
+
+# 4. Démarrer le serveur de développement
+npm run dev
+
+# → l'application est accessible sur :
+http://localhost:5173  (Vite)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Autres commandes utiles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```Bash
+npm build            # build production
+npm preview          # preview build local
+npm test             # lancer les tests unitaires
+npm lint             # vérification eslint + prettier
+npm typecheck        # vérification typescript uniquement
 ```
+
+## 🔧 Contribution
+Les contributions sont les bienvenues !
+Pour des modifications importantes, ouvre d'abord une issue pour discuter de ce que tu veux changer.
+
+1. Fork le projet
+2. Crée ta branche (`git checkout -b feature/ma-super-fonction`)
+3. Commit tes changements (`git commit -m 'feat: ajoute la dark mode toggle`)
+4. Push (`git push origin feature/ma-super-fonction`)
+5. Ouvre un Pull Request
+
+# ❤️ Remerciements & Inspirations
+
+- [shadcn/ui](https://ui.shadcn.com/) – pour les composants magnifiques et accessibles
+- [Vercel](https://vercel.com/) – déploiement ultra-rapide
+
+Projet créé avec ❤️ par [@cordrink](https://github.com/cordrink)
+N’hésite pas à mettre une ⭐ si le projet t’a plu ou t’a aidé !
