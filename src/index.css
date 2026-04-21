@@ -170,4 +170,29 @@ body {
         transform: translate(-4px, -3px);
         box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.75);
     }
+
+    .slider-btn {
+        padding: .5rem 1rem;
+        border: solid 1px white;
+        background-color: transparent;
+        transition: all .2s ease-out;
+        background: linear-gradient(to top, white 50%, transparent 50%);
+        background-size: 100% 200%;
+        background-position: top;
+    }
+
+    .slider-btn:hover {
+        color: black;
+        background-position: bottom;
+    }
+
+    .spacex-bg {
+        background: url("./assets/img/pexels-spacex-23769.jpg") center center;
+        background-size: cover;
+    }
+
+    .webb-bg {
+        background: url("./assets/img/wikiimages-telescopic-mirror-74034_1920.jpg") center center;
+        background-size: cover;
+    }
 }
