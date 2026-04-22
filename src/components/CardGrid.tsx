@@ -31,7 +31,7 @@ export const CardGrid = ({objects, mode}: {
         const newsData = objects as News[];
 
         return (
-            <div className="grid grid-cols-1 gap-y-4 auto-rows-[600px] lg:auto-rows-[300px]">
+            <div className="grid grid-cols-1 gap-y-4 auto-rows-[600px] lg:auto-rows-[300px] mb-10">
                 {newsData.map((item: News) => (
                     <NewsPageCard news={item} key={item.id}/>
                 ))}

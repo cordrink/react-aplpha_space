@@ -24,8 +24,6 @@ export const Apod = () => {
     const [day, setDay] = useState<number>(0);
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
-    console.log(`defaultApod: ${defaultApod}, data: ${data}, day: ${day}`);
-
     useEffect(() => {
         if (day === 0) return;
 

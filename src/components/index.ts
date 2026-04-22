@@ -26,3 +26,4 @@ export {NewsLauncherHeader} from "@/components/NewsLauncherHeader.tsx";
 export {NewsLauncherSquaredCards} from "@/components/NewsLauncherSquaredCards.tsx"
 export {NewsLauncherBubbledCards} from "@/components/NewsLauncherBubbledCards.tsx"
 export {NewsBubble} from "@/components/NewsBubble.tsx"
+export {PaginationContainer} from "@/components/PaginationContainer.tsx";
