@@ -45,7 +45,7 @@ export const RocketCard = ({rocket, index}: { rocket: Rocket, index: number }) =
                 <p>cost per launch: <span>{cost_per_launch}</span>$</p>
                 <p className={"mt-2"}>Payloads:</p>
                 {payload_weights.map((p) => (
-                    <p>{p.name}: <span>{p.kg}</span>kgs</p>
+                    <p key={p.name}>{p.name}: <span>{p.kg}</span>kgs</p>
                 ))}
                 <p className={"mt-2"}>Engines:</p>
                 <p>{engines.number}&nbsp; {engines.type}($)</p>

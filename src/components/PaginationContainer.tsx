@@ -11,6 +11,7 @@ import {
     PaginationNext,
     PaginationPrevious
 } from "@/components/ui/pagination.tsx";
+import {objectsPerPage} from "@/utils/constants.ts";
 
 export const PaginationContainer = () => {
     const {response} = useLoaderData() as HubbleImagesResponseWithParams | NewsResponseWithParams;
@@ -18,7 +19,6 @@ export const PaginationContainer = () => {
     const searchParams = new URLSearchParams(search);
 
     const pageFromUrl: string | null = searchParams.get("page");
-    const objectsPerPage: number = 24;
     const firstPage: number = 1;
 
     let activePage: number;

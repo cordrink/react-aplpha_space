@@ -1,5 +1,6 @@
 export {SingleHubble} from "./SingleHubble.tsx"
 export {HomeLayout} from "./HomeLayout.tsx"
+export {ErrorMain} from "./ErrorMain.tsx"
 export {Landing} from "./Landing.tsx"
 export {SpaceX} from "./SpaceX.tsx"
 export {Hubble} from "./Hubble.tsx"

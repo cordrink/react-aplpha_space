@@ -2,6 +2,7 @@ import {snapiCustomFetch} from "@/utils/customFetch.ts";
 import type {FilterParams, NewsResponse, NewsResponseWithParams} from "@/utils/types.ts";
 import {type LoaderFunction, useLoaderData} from "react-router-dom";
 import {CardGrid, Filters, Overview, PaginationContainer, Title} from "@/components";
+import {objectsPerPage} from "@/utils/constants.ts";
 
 const newsParams = {
     news_site_exclude: "spacePolicyOnline.com",
@@ -16,7 +17,7 @@ export const newsPageLoader: LoaderFunction = async ({request}): Promise<NewsRes
 
         const formattedParams = {
             search: urlParams.term ? urlParams.term : "",
-            offset: urlParams.page ? 24 * (parseFloat(urlParams.page) - 1) : 0,
+            offset: urlParams.page ? objectsPerPage * (parseFloat(urlParams.page) - 1) : 0,
             ...newsParams
         }
         const response = await snapiCustomFetch.get<NewsResponse>("", {
