@@ -3,8 +3,6 @@ import {Link} from "react-router-dom";
 import {CircleArrowRight} from "lucide-react";
 
 export const NewsPageCard = ({news}: { news: News }) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     const {url, image_url, title, published_at, news_site, summary} = news;
 
     return (

@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 export const WebbLauncher = () => {
     return (
-        <article className="test w-full h-[40vh] p-10 webb-bg">
+        <article className="w-full h-[40vh] p-10 webb-bg">
             <div className="align-element text-white p-2 flex flex-col ">
                 <p className={"font-bold text-4xl capitalize max-w-[40%] self-end text-right"}>
                     The most recent james webb images

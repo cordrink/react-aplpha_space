@@ -1,8 +1,7 @@
 import {datastroCustomFetch, nasaCustomFetch, snapiCustomFetch} from "@/utils/customFetch.ts";
-import {type LoaderFunction, useLoaderData} from "react-router-dom";
+import {type LoaderFunction} from "react-router-dom";
 import type {
     ApodType,
-    HubbleImage,
     HubbleImagesResponse,
     LandingPageNewsApodHubble,
     News,
@@ -29,10 +28,10 @@ export const newsFetch = async (): Promise<News[] | null> => {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const hubbleFetch = async (): Promise<HubbleImage[] | null> => {
+export const hubbleFetch = async (): Promise<HubbleImagesResponse | null> => {
     try {
         const response = await datastroCustomFetch.get<HubbleImagesResponse>("", {params: hubbleParams});
-        return response.data.results;
+        return response.data;
     } catch (error) {
         console.error(error);
         return null;
@@ -62,8 +61,6 @@ export const landingPageLoader: LoaderFunction = async (): Promise<LandingPageNe
 }
 
 export const Landing = () => {
-    const data = useLoaderData() as LandingPageNewsApodHubble;
-    console.log(data);
     return (
         <section>
             <NewsLauncher/>

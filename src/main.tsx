@@ -13,8 +13,8 @@ import {landingPageLoader} from "@/pages/Landing.tsx";
 const router = createBrowserRouter([
     {
         path: "/", element: <HomeLayout/>, children: [
-            {index: true, element: <Landing/>, loader: landingPageLoader, errorElement: <ErrorElement />},
-            {path: "spaceX", element: <SpaceX/>, loader: spacexLoader, errorElement: <ErrorElement />},
+            {index: true, element: <Landing/>, loader: landingPageLoader, errorElement: <ErrorElement/>},
+            {path: "spaceX", element: <SpaceX/>, loader: spacexLoader, errorElement: <ErrorElement/>},
             {path: "webb", element: <Webb/>, loader: webbPageLoader, errorElement: <ErrorElement/>},
             {path: "hubble", element: <Hubble/>, loader: hubblePageLoader, errorElement: <ErrorElement/>},
             {path: "news", element: <News/>, loader: newsPageLoader, errorElement: <ErrorElement/>},

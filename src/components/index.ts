@@ -22,3 +22,7 @@ export {HubbleLauncher} from "@/components/HubbleLauncher.tsx";
 export {SpaceXLauncher} from "@/components/SpaceXLauncher.tsx";
 export {ApodLauncher} from "@/components/ApodLauncher.tsx";
 export {WebbLauncher} from "@/components/WebbLauncher.tsx";
+export {NewsLauncherHeader} from "@/components/NewsLauncherHeader.tsx";
+export {NewsLauncherSquaredCards} from "@/components/NewsLauncherSquaredCards.tsx"
+export {NewsLauncherBubbledCards} from "@/components/NewsLauncherBubbledCards.tsx"
+export {NewsBubble} from "@/components/NewsBubble.tsx"
