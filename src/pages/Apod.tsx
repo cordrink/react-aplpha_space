@@ -5,7 +5,7 @@ import {Title} from "@/components";
 import {ApodPlayer} from "@/components/ApodPlayer.tsx";
 import {useEffect, useState} from "react";
 import {numberToDate} from "@/utils/function.ts";
-
+/* eslint-disable no-console */
 // eslint-disable-next-line react-refresh/only-export-components
 export const apodPageLoader: LoaderFunction = async (): Promise<ApodType | null> => {
     try {

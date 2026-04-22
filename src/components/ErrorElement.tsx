@@ -1,5 +1,5 @@
 import {useRouteError} from "react-router-dom";
-
+/* eslint-disable no-console */
 export const ErrorElement = () => {
     const error = useRouteError()
     console.log(error)

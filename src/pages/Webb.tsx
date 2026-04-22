@@ -2,7 +2,7 @@ import {snapiCustomFetch, webbCustomFetch} from "@/utils/customFetch.ts";
 import type {News, NewsResponse, WebbImage, WebbImagesResponse, WebbNewsAndImagery} from "@/utils/types.ts";
 import {type LoaderFunction, useLoaderData} from "react-router-dom";
 import {CardGrid, RelatedNews, Title, WebbTelescopeSummary} from "@/components";
-
+/* eslint-disable no-console */
 const newParams = {
     news_site_exclude: "SpacePolicyOnline.com",
     limit: 9,

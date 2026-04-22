@@ -4,7 +4,7 @@ import type {HubbleImage, HubbleImagesResponse} from "@/utils/types.ts";
 import {Button} from "@/components/ui/button.tsx";
 import {Title} from "@/components";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card.tsx";
-
+/* eslint-disable no-console */
 // eslint-disable-next-line react-refresh/only-export-components
 export const singleHubblePageLoader: LoaderFunction = async ({params}): Promise<HubbleImage | null> => {
     try {

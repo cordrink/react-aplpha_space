@@ -1,6 +1,6 @@
 import {Link, useRouteError} from "react-router-dom";
 import {Button} from "@/components/ui/button.tsx";
-
+/* eslint-disable no-console */
 export const ErrorMain = () => {
     const error = useRouteError()
     console.log(error)

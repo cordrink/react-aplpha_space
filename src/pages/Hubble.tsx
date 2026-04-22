@@ -3,7 +3,7 @@ import type {FilterParams, HubbleImagesResponse, HubbleImagesResponseWithParams}
 import {type LoaderFunction, useLoaderData} from "react-router-dom";
 import {CardGrid, Filters, Overview, PaginationContainer, Title} from "@/components";
 import {objectsPerPage} from "@/utils/constants.ts";
-
+/* eslint-disable no-console */
 const hubbleParams = {
     order_by: "photo_date_taken DESC",
     limit: objectsPerPage

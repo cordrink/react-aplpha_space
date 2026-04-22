@@ -8,7 +8,7 @@ import type {
     NewsResponse
 } from "@/utils/types.ts";
 import {ApodLauncher, HubbleLauncher, NewsLauncher, SpaceXLauncher, WebbLauncher} from "@/components";
-
+/* eslint-disable no-console */
 const newsParams = {ordering: "-published_at"}
 
 const hubbleParams = {
