@@ -8,7 +8,7 @@ export const WebbTelescopeSummary = () => {
                 width="100%"
                 allow={"autoplay"}
                 className={"min-h-[500px]"}
-                sandbox="allow-sandbox allow-same-origin"
+                sandbox="allow-scripts allow-same-origin allow-presentation allow-forms"
             ></iframe>
         </div>
     );

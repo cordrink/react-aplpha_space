@@ -10,7 +10,7 @@ export type ApodPlayerProps = {
 }
 
 export const ApodPlayer = ({apod, day, setDay, isLoading}: ApodPlayerProps) => {
-    const {date, explanation, url, title, media_type, hdurl} = apod;
+    const {date, explanation, url, title, media_type} = apod;
 
     const prevHandler = () => {
         setDay((state) => {
@@ -37,15 +37,13 @@ export const ApodPlayer = ({apod, day, setDay, isLoading}: ApodPlayerProps) => {
                 <div className="h-[400px] w-full">
                     {isLoading ? (
                         media_type === "video" ?
-                            (<video
-                                controls
-                                poster={hdurl}
-                                className={"h-full w-full bg-black"}
+                            (<iframe
+                                height={"100%"}
+                                width={"100%"}
                                 src={url}
+                                sandbox="allow-scripts allow-same-origin allow-presentation allow-forms"
                             >
-                                <source src={url} type="video/mp4"/>
-                                Votre navigateur ne supporte pas la lecture videos.
-                            </video>) :
+                            </iframe>) :
                             (<img
                                 src={url}
                                 alt="apod-img"
