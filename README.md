@@ -2,7 +2,7 @@
 
 # REACT ALPHA SPACE
 
-<!-- badge 1 ligne - le plus important en premier -->
+<!-- badge 1 ligne — le plus important en premier -->
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=white)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white)](https://vite.dev)
